@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApi2ReusableMechanisms", "WebApi2ReusableMechanisms\WebApi2ReusableMechanisms.csproj", "{CC5E9719-89D0-4714-9F76-7E4A1266E50F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApi2ReusableMechanisms.Tests", "WebApi2ReusableMechanisms.Tests\WebApi2ReusableMechanisms.Tests.csproj", "{FA0B8E8C-2C59-49B1-A4D2-901242B773B0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CC5E9719-89D0-4714-9F76-7E4A1266E50F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC5E9719-89D0-4714-9F76-7E4A1266E50F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC5E9719-89D0-4714-9F76-7E4A1266E50F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC5E9719-89D0-4714-9F76-7E4A1266E50F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA0B8E8C-2C59-49B1-A4D2-901242B773B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA0B8E8C-2C59-49B1-A4D2-901242B773B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA0B8E8C-2C59-49B1-A4D2-901242B773B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA0B8E8C-2C59-49B1-A4D2-901242B773B0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

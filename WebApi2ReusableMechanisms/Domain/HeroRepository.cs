@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using WebApi2ReusableMechanisms.Models;
 
 namespace WebApi2ReusableMechanisms.Domain
@@ -10,6 +11,7 @@ namespace WebApi2ReusableMechanisms.Domain
 		HeroModel Get(Guid id);
 		void Remove(Guid id);
 		void Update(Guid id, HeroModel hero);
+		bool Exists(string name);
 	}
 
 	public class HeroRepository : IHeroRepository
@@ -49,6 +51,11 @@ namespace WebApi2ReusableMechanisms.Domain
 		public void Remove(Guid id)
 		{
 			Heroes.Remove(id);
+		}
+
+		public bool Exists(string name)
+		{
+			return Heroes.Any(hero => hero.Value.Name.Equals(name, StringComparison.InvariantCultureIgnoreCase));
 		}
 	}
 }

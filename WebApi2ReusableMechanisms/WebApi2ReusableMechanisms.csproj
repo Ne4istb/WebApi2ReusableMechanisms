@@ -124,7 +124,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\NinjectWebCommon.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Compile Include="Controllers\HeroController.cs" />
+    <Compile Include="Controllers\HeroesController.cs" />
     <Compile Include="Domain\DummyData.cs" />
     <Compile Include="Domain\HeroRepository.cs" />
     <Compile Include="Global.asax.cs">

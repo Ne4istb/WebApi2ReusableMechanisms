@@ -7,11 +7,11 @@ namespace WebApi2ReusableMechanisms.Controllers
 {
 	[RoutePrefix("heroes/{id?}")]
 	[Route("", Name = "HeroRoute")]
-	public class HeroController : ApiController
+	public class HeroesController : ApiController
 	{
 		readonly IHeroRepository repository;
 
-		public HeroController(IHeroRepository repository)
+		public HeroesController(IHeroRepository repository)
 		{
 			this.repository = repository;
 		}

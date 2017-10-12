@@ -8,7 +8,8 @@ namespace WebApi2ReusableMechanisms.Domain
 		public static readonly HeroModel Superman = new HeroModel
 		{
 			Id = new Guid("30000000-0000-0000-0000-000000000001"),
-			Name = "Clark Kent",
+			Name = "Superman",
+			AlterEgo = "Clark Kent",
 			Age = 32,
 			SuperPowers = new[]
 			{
@@ -47,7 +48,8 @@ namespace WebApi2ReusableMechanisms.Domain
 		public static readonly HeroModel Batman = new HeroModel
 		{
 			Id = new Guid("30000000-0000-0000-0000-000000000002"),
-			Name = "Bruce Wayne",
+			Name = "Batman",
+			AlterEgo = "Bruce Wayne",
 			Age = 39,
 			SuperPowers = new[]
 			{

@@ -28,15 +28,15 @@ namespace WebApi2ReusableMechanisms.Controllers
 		}
 
 		[HttpPost]
-		public HeroModel Post(HeroModel model)
+		public HeroModel Post(HeroModel hero)
 		{
-			return repository.Create(model);
+			return repository.Create(hero);
 		}
 
 		[HttpPut]
-		public void Put(Guid id, HeroModel model)
+		public void Put(Guid id, HeroModel hero)
 		{
-			repository.Update(id, model);
+			repository.Update(id, hero);
 		}
 
 		[HttpDelete]

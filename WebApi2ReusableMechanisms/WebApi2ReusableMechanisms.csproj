@@ -133,6 +133,9 @@
     <Compile Include="Controllers\HeroesController.cs" />
     <Compile Include="Domain\DummyData.cs" />
     <Compile Include="Domain\HeroRepository.cs" />
+    <Compile Include="Filters\Validation\CustomValidatorFactory.cs" />
+    <Compile Include="Filters\Validation\ModelValidationFilter.cs" />
+    <Compile Include="Filters\Validation\ValidationErrorsExtensions.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

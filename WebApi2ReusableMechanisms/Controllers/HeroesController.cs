@@ -15,12 +15,10 @@ namespace WebApi2ReusableMechanisms.Controllers
 	public class HeroesController : ApiController
 	{
 		readonly IHeroRepository repository;
-		readonly IValidator<HeroModel> validator;
 
-		public HeroesController(IHeroRepository repository, IValidator<HeroModel> validator)
+		public HeroesController(IHeroRepository repository)
 		{
 			this.repository = repository;
-			this.validator = validator;
 		}
 
 		[HttpGet]
@@ -32,35 +30,19 @@ namespace WebApi2ReusableMechanisms.Controllers
 		[HttpPost]
 		public HeroModel Post(HeroModel model)
 		{
-			ProcessValidationError(validator.Validate(model));
 			return repository.Create(model);
 		}
 
 		[HttpPut]
 		public void Put(Guid id, HeroModel model)
 		{
-			ProcessValidationError(validator.Validate(model));
 			repository.Update(id, model);
-		}
-
-		void ProcessValidationError(ValidationResult result)
-		{
-			if (result.IsValid) return;
-
-			var message = string.Join("; ", result.Errors.Select(error => error.ErrorMessage));
-			ThrowUnprocessableEntityException(message);
 		}
 
 		[HttpDelete]
 		public void Delete(Guid id)
 		{
 			repository.Remove(id);
-		}
-
-		void ThrowUnprocessableEntityException(string message)
-		{
-			var response = Request.CreateErrorResponse((HttpStatusCode)422, message);
-			throw new HttpResponseException(response);
 		}
 	}
 }

@@ -1,4 +1,5 @@
 ﻿using System.Web.Http;
+using WebApi2ReusableMechanisms.Filters.Validation;
 
 namespace WebApi2ReusableMechanisms
 {
@@ -6,16 +7,14 @@ namespace WebApi2ReusableMechanisms
 	{
 		public static void Register(HttpConfiguration config)
 		{
-			// Web API configuration and services
+			RegisterFilters(config);
 
-			// Web API routes
 			config.MapHttpAttributeRoutes();
+		}
 
-			config.Routes.MapHttpRoute(
-				 name: "DefaultApi",
-				 routeTemplate: "api/{controller}/{id}",
-				 defaults: new { id = RouteParameter.Optional }
-			);
+		static void RegisterFilters(HttpConfiguration config)
+		{
+			config.Filters.Add(new ModelValidationFilter());
 		}
 	}
 }

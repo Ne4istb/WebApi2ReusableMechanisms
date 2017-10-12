@@ -1,7 +1,9 @@
 ﻿using System;
+using FluentValidation.Attributes;
 
 namespace WebApi2ReusableMechanisms.Models
 {
+	[Validator(typeof(HeroValidator))]
 	public class HeroModel
 	{
 		public Guid Id;

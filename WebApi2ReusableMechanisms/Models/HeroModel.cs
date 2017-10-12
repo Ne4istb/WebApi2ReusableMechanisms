@@ -6,6 +6,7 @@ namespace WebApi2ReusableMechanisms.Models
 	{
 		public Guid Id;
 		public string Name;
+		public string AlterEgo;
 		public int Age;
 		public SuperPower[] SuperPowers;
 		public Lair Lair;

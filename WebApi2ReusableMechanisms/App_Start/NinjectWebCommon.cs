@@ -1,5 +1,8 @@
+using FluentValidation;
+using FluentValidation.TestHelper;
 using Ninject.Web.WebApi;
 using WebApi2ReusableMechanisms.Domain;
+using WebApi2ReusableMechanisms.Models;
 
 [assembly: WebActivatorEx.PreApplicationStartMethod(typeof(WebApi2ReusableMechanisms.App_Start.NinjectWebCommon), "Start")]
 [assembly: WebActivatorEx.ApplicationShutdownMethodAttribute(typeof(WebApi2ReusableMechanisms.App_Start.NinjectWebCommon), "Stop")]
@@ -66,6 +69,7 @@ namespace WebApi2ReusableMechanisms.App_Start
 		private static void RegisterServices(IKernel kernel)
 		{
 			kernel.Bind<IHeroRepository>().ToConstant(new HeroRepository());
+			kernel.Bind<IValidator<HeroModel>>().To<HeroValidator>();
 		}
 	}
 }
